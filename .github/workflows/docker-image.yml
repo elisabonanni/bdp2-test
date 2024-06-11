@@ -17,4 +17,4 @@ jobs:
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag elibonanni/web_server
     - name: Push the image to DockerHub
-      run: docker login -u elibonanni -p ${{secrets.DOCKER_TOKEN}} && push elibonanni/web_server
+      run: docker login -u elibonanni -p ${{secrets.DOCKER_TOKEN}} && docker push elibonanni/web_server
